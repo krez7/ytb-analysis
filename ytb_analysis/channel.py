@@ -9,7 +9,7 @@ class ChannelInstance:
 
     _channel_id: str
     _service: Resource
-    _videos_list: list[str]
+    _videos_list: list[dict]
 
     @property
     def channel_id(self):
