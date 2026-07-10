@@ -15,7 +15,7 @@ class TestChannelInstance:
     def instance(self):
         examples = []
 
-        for i in range(4):
+        for i in range(2):
             examples.append(({"status": "200"},json.dumps(json.load(open(curr_dir + "/responses/videos_list_" + str(i) + ".json")))))
 
         http = HttpMockSequence(examples)
