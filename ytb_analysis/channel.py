@@ -4,12 +4,13 @@ from urllib.error import HTTPError
 if TYPE_CHECKING:
     from googleapiclient.discovery import Resource
 
+type JsonType = dict[str, JsonType] | dict[str, str] | dict[str, int]
 
 class ChannelInstance:
 
     _channel_id: str
     _service: Resource
-    _videos_list: list[dict]
+    _videos_list: list[JsonType]
 
     @property
     def channel_id(self):
