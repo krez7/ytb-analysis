@@ -14,18 +14,6 @@ class ChannelInstance:
 
     @property
     def channel_id(self):
-        if self._channel_id is None:
-            channel_request = self._service.channels().list(part="contentDetails.relatedPlaylists.uploads",
-                                                            id=self._channel_id)
-            channel_resources: Resource = None
-            try:
-                channel_resources = channel_request.execute()
-
-            except HTTPError as e:
-                print('Error response status code : {0}, reason : {1}'.format(e.status_code, e.error_details))
-
-            self._channel_id = channel_resources.items.id
-
         return self._channel_id
 
     def _list_videos(self, segmentation: int):
