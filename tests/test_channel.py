@@ -15,6 +15,8 @@ class TestChannelInstance:
     def instance(self):
         examples = []
 
+        examples.append(({"status": "200"},json.dumps(json.load(open(curr_dir + "/responses/uploads_id.json")))))
+
         for i in range(2):
             examples.append(({"status": "200"},json.dumps(json.load(open(curr_dir + "/responses/videos_list_" + str(i) + ".json")))))
 
