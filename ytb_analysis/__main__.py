@@ -11,4 +11,4 @@ if __name__ == "__main__":
     
     instance = ChannelInstance(service, channel_id)
 
-    print(instance.videos_list)
+    print(instance.videos_stats)
