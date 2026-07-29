@@ -4,7 +4,7 @@ from urllib.error import HTTPError
 if TYPE_CHECKING:
     from googleapiclient.discovery import Resource
 
-type JsonType = dict[str, JsonType] | dict[str, str] | dict[str, int]
+type JsonType = dict[str, list[JsonType] | JsonType | str | bool | float | int | None]
 
 class ChannelInstance:
 
